@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_new"
+    android:layout_height="match_parent"
+    tools:context="com.allmy.allstatusdownloader.Activity.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_180sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_bg" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp">
+
+        <ImageView
+            android:id="@+id/ivCreation"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_toLeftOf="@+id/ivSetting"
+            android:src="@drawable/ic_my_creation" />
+
+        <ImageView
+            android:id="@+id/ivSetting"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:src="@drawable/ic_settings" />
+    </RelativeLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_135sdp"
+        android:src="@mipmap/ic_launcher_round" />
+
+    <LinearLayout
+        android:layout_below="@+id/ivIcon"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/frameBanner"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:orientation="vertical"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            style="@style/myTextviewBold"
+            android:text="@string/app_name"
+            android:textColor="@color/bgBox"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            android:fillViewport="true"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/lInsta"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/bg_round_box_dash"
+                        android:layout_height="@dimen/_110sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_35sdp"
+                            android:src="@drawable/dash_insta"
+                            android:layout_height="@dimen/_35sdp"/>
+
+                        <TextView
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:text="@string/tInsta"
+                            style="@style/myTextviewBold"
+                            android:textSize="12sp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lFacebook"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_round_box_dash"
+                        android:layout_height="@dimen/_110sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_35sdp"
+                            android:src="@drawable/dash_fb"
+                            android:layout_height="@dimen/_35sdp"/>
+
+                        <TextView
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:text="@string/tFace"
+                            style="@style/myTextviewBold"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lTwitter"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/bg_round_box_dash"
+                        android:layout_height="@dimen/_110sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_35sdp"
+                            android:src="@drawable/dash_twitter"
+                            android:layout_height="@dimen/_35sdp"/>
+
+                        <TextView
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:text="@string/tTwitter"
+                            style="@style/myTextviewBold"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/lWp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/bg_round_box_dash"
+                        android:layout_height="@dimen/_110sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_35sdp"
+                            android:src="@drawable/dash_wp"
+                            android:layout_height="@dimen/_35sdp"/>
+
+                        <TextView
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:text="@string/tWhat"
+                            style="@style/myTextviewBold"
+                            android:textSize="12sp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lWB"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_round_box_dash"
+                        android:layout_height="@dimen/_110sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_35sdp"
+                            android:src="@drawable/dash_wb"
+                            android:layout_height="@dimen/_35sdp"/>
+
+                        <TextView
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:text="@string/tWB"
+                            style="@style/myTextviewBold"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lGB"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/bg_round_box_dash"
+                        android:layout_height="@dimen/_110sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_35sdp"
+                            android:src="@drawable/dash_wgb"
+                            android:layout_height="@dimen/_35sdp"/>
+
+                        <TextView
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:text="@string/tGB"
+                            style="@style/myTextviewBold"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/lRoposo"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/bg_round_box_dash"
+                        android:layout_height="@dimen/_110sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_35sdp"
+                            android:src="@drawable/dash_roposo"
+                            android:layout_height="@dimen/_35sdp"/>
+
+                        <TextView
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:text="@string/tRoposo"
+                            style="@style/myTextviewBold"
+                            android:textSize="12sp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lMoj"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_round_box_dash"
+                        android:layout_height="@dimen/_110sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_35sdp"
+                            android:src="@drawable/dash_moj"
+                            android:layout_height="@dimen/_35sdp"/>
+
+                        <TextView
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:text="@string/tMoj"
+                            style="@style/myTextviewBold"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameBanner"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

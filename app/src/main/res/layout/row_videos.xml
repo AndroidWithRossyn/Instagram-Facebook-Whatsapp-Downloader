@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMain"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="0dp"
+        android:layout_height="@dimen/_130sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/ivVideo"
+                android:layout_width="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:layout_width="@dimen/_10sdp"
+                android:src="@drawable/ic_play"
+                android:layout_margin="@dimen/_8sdp"
+                android:layout_alignParentRight="true"
+                android:layout_height="@dimen/_10sdp"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

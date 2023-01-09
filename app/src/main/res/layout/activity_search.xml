@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_new"
+    tools:context="com.allmy.allstatusdownloader.Activity.ActivitySearch">
+
+
+    <RelativeLayout
+        android:id="@+id/relToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp">
+
+        <ImageView
+            android:id="@+id/backInsta"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:src="@drawable/ic_back" />
+
+        <EditText
+            android:id="@+id/etSearch"
+            style="@style/myTextviewBold"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@+id/backInsta"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_round_box_dash"
+            android:gravity="center_vertical"
+            android:imeOptions="actionSearch"
+            android:hint="Search here"
+            android:paddingStart="@dimen/_12sdp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/unselText"
+            android:textSize="@dimen/_10sdp" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/lr_recy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relToolBar"
+        android:orientation="vertical">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:scrollbars="vertical" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/upload_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/_15sdp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/myTextviewBold"
+            android:gravity="center"
+            android:text="Please wait while we fetching..."
+            android:textColor="@color/unselText"
+            android:textSize="@dimen/_11sdp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/no_Userfound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/_25sdp"
+        android:layout_marginRight="@dimen/_25sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="No data found"
+            android:textAlignment="center"
+            android:textColor="@color/unselText"
+            style="@style/myTextviewBold"
+            android:textSize="@dimen/_11sdp" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_network"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/no_Userfound"
+        android:layout_centerInParent="true"
+        android:text="No Internet Connection"
+        android:textAlignment="center"
+        style="@style/myTextviewBold"
+        android:textColor="@color/unselText"
+        android:textSize="@dimen/_11sdp"
+        android:visibility="gone" />
+</RelativeLayout>

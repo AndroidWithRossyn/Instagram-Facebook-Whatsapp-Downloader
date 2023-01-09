@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">Story &amp; Status Saver</string>
+
+    <string name="APP_ID">ca-app-pub-5111587965359348~9838631571</string>
+    <string name="interstitial_ID">ca-app-pub-5111587965359348/2783845045</string>
+    <string name="banner_ID">ca-app-pub-5111587965359348/3714579493</string>
+    <string name="welcome">Welcome!</string>
+    <string name="splashtxt">How nice to see you!</string>
+
+    <string name="tInsta">Instagram</string>
+    <string name="tFace">Facebook</string>
+    <string name="tTwitter">Twitter</string>
+    <string name="tWhat">Whatsapp</string>
+    <string name="tWB">Business Whatsapp</string>
+    <string name="tGB">GB Whatsapp</string>
+    <string name="tRoposo">Roposo</string>
+    <string name="tMoj">Moj</string>
+
+    <string name="CreImage">Photos</string>
+    <string name="CreVideo">Video</string>
+    <string name="txtNoData">No Data Found</string>
+
+    <string name="allow_whatsapp_access">Allow Whatsapp Access</string>
+    <string name="allow_app_to_access_whatsapp_status_folder">Allow App to Access Get All Status</string>
+    <string name="txtWrongfolder">You have selected wrong folder. Please select .Statuses folder to view Whatsapp Status.</string>
+
+    <string name="previewWp">WhatsApp</string>
+    <string name="previewDownload">Download</string>
+    <string name="previewShare">Share</string>
+    <string name="Share_With">Share with</string>
+    <string name="Created_By_">Created By :</string>
+    <string name="Msg_WhatsApp_Not_Installed">WhatsApp have not been installed</string>
+    <string name="blank_url">Please enter url</string>
+
+    <string name="loginFB">Log in to Facebook</string>
+    <string name="loginInsta">Log in to Instagram</string>
+    <string name="loginFBmsg">We never store any information</string>
+
+    <string name="internet_connection">please check network connection</string>
+    <string name="select_media">please select photo / video to download</string>
+    <string name="hour_ago">Hour</string>
+    <string name="hours_ago">Hours</string>
+    <string name="minutes_ago">Minutes</string>
+    <string name="month_ago">Month</string>
+    <string name="months_ago">Months</string>
+    <string name="few_moments_ago">few moments</string>
+    <string name="recent">Newest First</string>
+    <string name="oldest_first">Oldest First</string>
+    <string name="unselect_media">Please unselect media</string>
+    <string name="search_user">Search Users</string>
+    <string name="alphabetical">Alphabetically</string>
+    <string name="login">Re-login</string>
+    <string name="error_log">Error Message :</string>
+    <string name="instagram">Instagram</string>
+    <string name="error_box">Error</string>
+    <string name="tx_retry">Retry</string>
+    <string name="favourite_user">Starred Users</string>
+    <string name="remove_favourite">Remove From Starred</string>
+    <string name="week_ago">week ago</string>
+    <string name="weeks_ago">weeks ago</string>
+    <string name="days_ago">days ago</string>
+    <string name="no_data_found">Data not found</string>
+    <string name="no_favourite_user">No Starred Users Found</string>
+    <string name="no_media">no media found</string>
+
+    <string name="rateUS">Rate Us</string>
+    <string name="shareApp">Share App</string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="suggestion">Suggestions</string>
+    <string name="more">More Apps</string>
+</resources>

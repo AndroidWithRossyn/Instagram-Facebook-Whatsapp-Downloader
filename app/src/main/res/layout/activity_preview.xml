@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_new"
+    tools:context="com.allmy.allstatusdownloader.Activity.PreviewActivity">
+
+    <RelativeLayout
+        android:id="@+id/reltool"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:src="@drawable/ic_back" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_above="@+id/lBottom"
+        android:layout_below="@+id/reltool"
+        android:layout_margin="@dimen/_8sdp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivPreviewImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/ivPlay"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:src="@drawable/iv_play_preview" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lBottom"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:weightSum="3"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:background="@drawable/bg_round_box_dash"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/_60sdp">
+
+        <LinearLayout
+            android:id="@+id/lWhatsapp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:src="@drawable/ic_whatsapp_preview"
+                android:layout_height="@dimen/_20sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                style="@style/myTextviewMedium"
+                android:text="@string/previewWp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/_4sdp"
+            android:background="@drawable/line_white"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_45sdp"/>
+
+        <LinearLayout
+            android:id="@+id/lDownload"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:src="@drawable/ic_my_creation"
+                app:tint="@color/bgStart"
+                android:layout_height="@dimen/_20sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                style="@style/myTextviewMedium"
+                android:text="@string/previewDownload"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/_4sdp"
+            android:background="@drawable/line_white"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_45sdp"/>
+
+        <LinearLayout
+            android:id="@+id/lShare"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:src="@drawable/ic_share_app"
+                android:layout_height="@dimen/_20sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                style="@style/myTextviewMedium"
+                android:text="@string/previewShare"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

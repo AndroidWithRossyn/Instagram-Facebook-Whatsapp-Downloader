@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.allmy.allstatusdownloader">
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:node="replace" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name="com.allmy.allstatusdownloader.AllStatusApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.AllStatusDownloader">
+        <activity
+            android:name="com.allmy.allstatusdownloader.Activity.HeighLightStory_shower"
+            android:exported="false" />
+        <activity
+            android:name="com.allmy.allstatusdownloader.Activity.InstaHighlightActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.allmy.allstatusdownloader.Activity.VideoShower"
+            android:exported="false" />
+        <activity
+            android:name="com.allmy.allstatusdownloader.Activity.ImageShower"
+            android:exported="false" />
+        <activity
+            android:name="com.allmy.allstatusdownloader.Activity.AlbumActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.allmy.allstatusdownloader.Activity.SavedFeed"
+            android:exported="false" />
+        <activity
+            android:name="com.allmy.allstatusdownloader.Activity.ShowAllData"
+            android:exported="false" />
+        <activity
+            android:name="com.allmy.allstatusdownloader.Activity.ActivitySearch"
+            android:exported="false" />
+        <activity
+            android:name="com.allmy.allstatusdownloader.Activity.FavUserActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.allmy.allstatusdownloader.Activity.UserProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.allmy.allstatusdownloader.Activity.ActivitywithDrawer"
+            android:exported="false" />
+        <activity
+            android:name="com.allmy.allstatusdownloader.Activity.InstaLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.allmy.allstatusdownloader.Activity.InstaDownloadActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.allmy.allstatusdownloader.Activity.FacebookLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.allmy.allstatusdownloader.Activity.FBDownloadActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.allmy.allstatusdownloader.Activity.OtherDownloadActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.allmy.allstatusdownloader.Activity.PreviewActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.allmy.allstatusdownloader.Activity.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.allmy.allstatusdownloader.Activity.WhatsappActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.allmy.allstatusdownloader.Activity.CreationActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.allmy.allstatusdownloader.Activity.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+        <activity
+            android:name="com.allmy.allstatusdownloader.Activity.MainActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/APP_ID" />
+    </application>
+
+</manifest>

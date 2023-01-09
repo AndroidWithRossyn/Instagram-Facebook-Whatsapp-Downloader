@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_new"
+    tools:context="com.allmy.allstatusdownloader.Activity.ActivitywithDrawer">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_160sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_top_screen" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:src="@drawable/ic_back" />
+
+        <ImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:src="@drawable/ic_search" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lTop"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_115sdp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/lProfile"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:background="@drawable/bg_icon_circle"
+            android:gravity="center">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="@dimen/_55sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:onClick="Logout" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_toRightOf="@+id/lProfile"
+            android:id="@+id/lLoginInsta"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_50sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_toolbar"
+                    android:layout_weight="1"
+                    style="@style/myTextviewBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Username"
+                    android:singleLine="true"
+                    android:layout_gravity="bottom"
+                    android:maxLines="1"
+                    android:textColor="@color/bgBox"
+                    android:textSize="@dimen/_14sdp" />
+
+                <TextView
+                    android:id="@+id/txt_toolsub"
+                    style="@style/myTextviewBold"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="abcd"
+                    android:textColor="@color/unselText"
+                    android:textSize="@dimen/_12sdp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/frameBanner"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_below="@id/lTop">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:scrollbars="none"
+                        android:visibility="visible"
+                        tools:listitem="@layout/viewitemnew" />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <RelativeLayout
+            android:id="@+id/upload_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/_16sdp"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mon_bold"
+                android:gravity="center"
+                android:textColor="@color/unselText"
+                android:text="Please wait while we fetching..."
+                android:textSize="@dimen/_10sdp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/no_Userfound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="No data found"
+                android:textAlignment="center"
+                android:textColor="@color/unselText"
+                android:fontFamily="@font/mon_bold"
+                android:textSize="@dimen/_10sdp" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_network"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/no_Userfound"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/mon_bold"
+            android:text="Please check internet connection"
+            android:textAlignment="center"
+            android:textColor="@color/unselText"
+            android:textSize="@dimen/_11sdp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btn_retry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_network"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/mon_bold"
+            android:gravity="center"
+            android:text="(Retry)"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/frameBanner"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

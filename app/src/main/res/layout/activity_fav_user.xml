@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_new"
+    tools:context="com.allmy.allstatusdownloader.Activity.FavUserActivity">
+
+    <RelativeLayout
+        android:id="@+id/relToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            style="@style/myTextviewBold"
+            android:text="Favourite Users"
+            android:textColor="@color/bgBox"
+            android:textSize="@dimen/_14sdp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_below="@id/relToolBar">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        android:visibility="visible"
+                        tools:listitem="@layout/viewitemnew" />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <RelativeLayout
+            android:id="@+id/upload_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/_16sdp"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/myTextviewBold"
+                android:gravity="center"
+                android:textColor="@color/unselText"
+                android:text="Please wait while we fetching..."
+                android:textSize="@dimen/_11sdp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/no_Userfound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="No data found"
+                android:textAlignment="center"
+                android:textColor="@color/unselText"
+                style="@style/myTextviewBold"
+                android:textSize="@dimen/_11sdp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_network"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/no_Userfound"
+            android:layout_centerInParent="true"
+            style="@style/myTextviewBold"
+            android:text="Please check internet connection"
+            android:textAlignment="center"
+            android:textColor="@color/unselText"
+            android:textSize="@dimen/_11sdp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btn_retry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_network"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            style="@style/myTextviewBold"
+            android:gravity="center"
+            android:text="(Retry)"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</RelativeLayout>
