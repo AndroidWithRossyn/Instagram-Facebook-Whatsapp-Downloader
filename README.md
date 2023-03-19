@@ -33,7 +33,7 @@ You can save status from different apps with All Status & Story Saver Downloader
 .
 .
 
->Paid Source Code Available 19USD
+>Paid Source Code Available
 
 <p align="center">
     <a href="https://play.google.com/store/apps/details?id=com.banrossyn.post.story.downloader">
